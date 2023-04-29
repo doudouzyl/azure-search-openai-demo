@@ -4,7 +4,8 @@ import time
 import logging
 import openai
 from flask import Flask, request, jsonify
-from azure.identity import DefaultAzureCredential
+from azure.identity import DefaultAzureCredential, AzureAuthorityHosts
+from azure.identity import ClientSecretCredential
 from azure.search.documents import SearchClient
 from approaches.retrievethenread import RetrieveThenReadApproach
 from approaches.readretrieveread import ReadRetrieveReadApproach
